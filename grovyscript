@@ -1,0 +1,23 @@
+import groovy.sql.Sql
+
+stage('Connection') {
+  node('master') {
+    def sql = Sql.newInstance("jdbc:mysql://localhost:3306/testdb",
+      "root", "Password", "com.mysql.jdbc.Driver")
+
+    /*Inserting record into contact */
+    /*INSERT INTO CONTACT(FIRST_NAME, LAST_NAME, PHONE, MOBILE, EMAIL) VALUES ('Hemanth', 'Reddy', '9876543210', '9876543210', 'hr@gmail.com');*/
+    sql.execute(params.insertContact)
+
+    /*Create user in mysql*/
+    /*CREATE USER  test_account IDENTIFIED BY 'test_password';*/
+    sql.execute(params.createUser)
+
+    /*Alter table statement for addressing column to contact table*/
+    /*ALTER TABLE CONTACT ADD ADDRESS CHAR(30) AFTER EMAIL;*/
+    sql.execute(params.addColumn);
+
+    sql.close()
+
+  }
+}
