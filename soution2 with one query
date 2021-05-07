@@ -1,1 +1,19 @@
+import groovy.sql.Sql
 
+stage('Connection') {
+  node('master') {
+    def sql = Sql.newInstance("jdbc:mysql://localhost:3306/testdb",
+      "root", "Password", "com.mysql.jdbc.Driver")
+
+    
+    
+    sql.execute(params.insertSql)
+    
+    println("Query executed successfully" );
+
+   
+
+    sql.close()
+
+  }
+}
