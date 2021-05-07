@@ -13,3 +13,6 @@ assignment
  
  alter table
  
+ 
+ With help of  grovy script  we are able to commucate with database 
+ 
