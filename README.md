@@ -4,15 +4,11 @@ assignment
 
  i have created jenkins people as a parameterized 
  
- 3 parameters
+ 3 parameters as input
  
- insert  table
+     insert  table
+     create a new user
+     alter table
  
- 
- create a new user
- 
- alter table
- 
- 
- With help of  grovy script  we are able to commucate with database 
+With help of  grovy script  we are able to commucate with database 
  
