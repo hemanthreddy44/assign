@@ -1,14 +1,14 @@
-# assign
+# assignment
 assignment
 
 
- i have created jenkins people as a parameterized 
+ I have created Jenkins people as a parameterized 
  
- 3 parameters as input
+ Three parameters as input
  
      insert  table
      create a new user
      alter table
  
-With help of  grovy script  we are able to commucate with database 
+With the help of a groovy script, we are able to communicate with the database 
  
